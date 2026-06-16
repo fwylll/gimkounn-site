@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "http://119.29.230.54/brand-api/api/$1"
+      "destination": "http://119.29.230.54/gimkounn-api/api/$1"
     },
     {
       "source": "/gimkounn-images/(.*)",
