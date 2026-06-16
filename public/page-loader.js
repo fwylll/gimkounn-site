@@ -375,7 +375,10 @@
       // 3. Nav/Footer from config
       loadNavFooter(config);
 
-      // 4. Products grid loaded by standalone script in products page
+      // 4. Products grid — fetch and render product cards
+      if(pageKey==='products'){
+        fetchProductsGrid();
+      }
 
       // 5. Re-init animations
       initAnimations();
@@ -423,6 +426,31 @@
     window.go(i);
     window._timer=setInterval(function(){window.go(window._ci+1)},5000);
   };
+
+  function fetchProductsGrid(){
+    var grid=document.getElementById('product-grid');
+    if(!grid) return;
+    fetch('/api/products/'+SITE+'?_t='+Date.now()).then(function(r){return r.json()}).then(function(data){
+      var prods=data.products||[];
+      if(!prods.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">No products found</div>';return;}
+      var h='';
+      for(var i=0;i<prods.length;i++){
+        var p=prods[i];
+        if(p._meta) continue;
+        var slug=p.slug||p.id||'product';
+        var img=p.mainImage||'';
+        var stars='';
+        var r=Math.round(p.rating||0);
+        for(var s=0;s<5;s++) stars+=s<r?'★':'☆';
+        h+='<a class="product-card" href="/products/'+escAttr(slug)+'/">';
+        h+='<div class="pc-img"'+(img?' style="background-image:url('+escAttr(img)+')"':'')+'></div>';
+        h+='<div class="pc-info"><h3>'+esc(p.title||'')+'</h3>';
+        h+='<div class="pc-price">$'+esc(String(p.price||'0'))+'</div>';
+        h+='<div class="pc-rating">'+stars+' <span>'+esc(String(p.rating||''))+'</span></div></div></a>\n';
+      }
+      grid.innerHTML=h;
+    }).catch(function(){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">Failed to load products</div>';});
+  }
 
   function setupFilterSort(){
     var btns=document.querySelectorAll('.filter-btn');
