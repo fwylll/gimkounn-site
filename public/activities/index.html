@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Community — HANSYBAY | Join Our Kids Skating Community</title>
-<meta name="description" content="Join the HANSYBAY community of skating families. Challenges, skating journeys, and connections with parents who trust our CE certified shoes.">
+<title id="seo-title">Community — HANSYBAY | Join Our Kids Skating Community</title>
+<meta id="seo-desc" name="description" content="Join the HANSYBAY community of skating families. Challenges, skating journeys, and connections with parents who trust our CE certified shoes.">
 <link rel="canonical" href="https://hansybay.com/activities/">
 <link rel="alternate" hreflang="en" href="https://hansybay.com/activities/">
 <link rel="alternate" hreflang="x-default" href="https://hansybay.com/activities/">
@@ -309,7 +309,7 @@ function moveCarousel(dir){clearInterval(_timer);go(_ci+dir);_timer=setInterval(
 function initAnimations(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:0.15});document.querySelectorAll('.fade-up,.fade-in,.scale-in').forEach(function(el){obs.observe(el)})}
 document.addEventListener('DOMContentLoaded',function(){initAnimations();setTimeout(initCarousel,50)});
 </script>
-</head>
+<script src="/page-loader.js"></script></head>
 <body>
 <a href="#main-content" class="skip-link" style="position:absolute;top:-9999px;left:-9999px;z-index:99999;padding:12px 20px;background:var(--cta);color:#fff;font-weight:700;border-radius:0 0 var(--radius-sm) var(--radius-sm)">Skip to main content</a>
 <nav class="nav"><div class="nav-inner">
@@ -324,19 +324,7 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 </div>
 <a href="/products/" class="nav-cta">Shop Now</a>
 </div></nav>
-<main id="main-content">
-<section class="page-hero" style="background:url(/gimkounn-images/Roller_Shoes_1_1781251385311.png) 50% 50% / cover no-repeat, linear-gradient(135deg,#1a1a2e,#1a1a3d);color:#fff;padding:80px 24px;text-align:center"><div style="position:relative;z-index:2"><h1 style="color:#fff">Community</h1><p style="color:rgba(255,255,255,.85);max-width:600px;margin:0 auto">Get involved, connect, and share the roll</p></div></section>
-
-<section class="cc-section"><div class="cc-header"><h2>Get Involved</h2><p>Join the GIMKOUNN community of skaters and families</p></div><div class="cc-grid">
-<div class="cc-card fade-up"><span class="cc-icon">🏆</span><h3>Summer Skate Challenge 2026</h3><p>Post your best trick video and win a free pair! Open to all GIMKOUNN kids.</p></div>
-<div class="cc-card fade-up"><span class="cc-icon">🎨</span><h3>Design Your Dream Skates</h3><p>Submit your color combinations and patterns. Winner gets their design produced.</p></div>
-<div class="cc-card fade-up"><span class="cc-icon">📸</span><h3>Photo Contest: Best Skate Spot</h3><p>Share your favorite place to skate — parks, driveways, skate rinks — win prizes.</p></div>
-<div class="cc-card fade-up"><span class="cc-icon">❤️</span><h3>Family Skate Day</h3><p>Monthly meet-ups across 12 cities. Connect with other skating families near you.</p></div>
-<div class="cc-card fade-up"><span class="cc-icon">🎓</span><h3>Learn to Skate Series</h3><p>Free video tutorials from beginner to advanced tricks. New lessons every week.</p></div>
-<div class="cc-card fade-up"><span class="cc-icon">🌟</span><h3>Ambassador Program</h3><p>Become a GIMKOUNN ambassador and earn rewards for sharing your skating journey.</p></div>
-</div></section>
-
-</main>
+<main id="main-content"></main>
 <footer class="site-footer"><div class="site-footer-inner">
 <div class="ft-brand"><div class="ft-logo">HANSYBAY</div><p>Designer roller shoes with removable wheels and 7-color LED lights. CE EN13843 certified. Built for kids aged 3-16 who deserve to fly.</p></div>
 <div class="ft-col"><h3>Shop</h3>
@@ -359,5 +347,5 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 <span>© 2026 HANSYBAY. All rights reserved.</span>
 <span>United States · contact@hansybay.com</span>
 </div></footer>
-</body>
+<script>loadPage('activities')</script></body>
 </html>
