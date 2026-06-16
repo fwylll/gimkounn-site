@@ -157,7 +157,7 @@
     if(s.extra) h+='<p style="color:var(--text2);line-height:1.8;font-size:1.05rem;margin-top:20px">'+esc(s.extra)+'</p>';
     h+='</div><div style="background:linear-gradient(135deg,#fce4ec,#e8f5ee);min-height:400px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:6rem">🛼</div></div></section>';
     if(s.features&&s.features.length){
-      h+='<section style="background:var(--gray-bg);padding:60px 24px"><div style="max-width:var(--w);margin:0 auto;text-align:center"><h2>'+esc(s.title2||'Why Choose '+BRAND)+'</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px">';
+      h+='<section style="background:var(--gray-bg);padding:60px 24px"><div style="max-width:var(--w);margin:0 auto;text-align:center"><h2>'+esc(s.title2||'Why Choose '+BRAND)+'</h2><div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:40px">';
       for(var i=0;i<s.features.length;i++){
         var f=s.features[i];
         h+='<div style="background:var(--white);padding:28px 20px;border-radius:var(--radius-sm);box-shadow:0 2px 12px rgba(0,0,0,.04)"><div style="font-size:2rem;margin-bottom:10px">'+esc(f.icon||'')+'</div><h3 style="font-size:.92rem;font-weight:700;margin-bottom:6px">'+esc(f.title||'')+'</h3><p style="font-size:.78rem;color:var(--text2);line-height:1.5">'+esc(f.desc||'')+'</p></div>';
