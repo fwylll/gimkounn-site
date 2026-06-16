@@ -241,7 +241,6 @@
       h+='</div></div>';
     }
     h+='</div></section>';
-    h+='<div class="products-section"><div class="products-header"><h2>Our Products</h2></div><div id="product-grid" class="products-grid"><div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">Loading...</div></div></div>';
     return h;
   }
 
