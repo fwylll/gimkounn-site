@@ -3,12 +3,12 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "http://119.29.230.54/brand-api/api/:path*"
+      "source": "/api/(.*)",
+      "destination": "http://119.29.230.54/brand-api/api/$1"
     },
     {
-      "source": "/gimkounn-images/:path*",
-      "destination": "http://119.29.230.54/gimkounn-images/:path*"
+      "source": "/gimkounn-images/(.*)",
+      "destination": "http://119.29.230.54/gimkounn-images/$1"
     }
   ],
   "headers": [

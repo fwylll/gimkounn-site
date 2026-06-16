@@ -1,9 +1,9 @@
-/* page-loader.js — HANSYBAY
+/* page-loader.js — GIMKOUNN
  * Fetches page-config from API and dynamically renders all sections.
  * Include in <head>, call: loadPage('home')
  */
 (function(){
-  var CONFIG_ENDPOINT = '/page-config.json';
+  var CONFIG_ENDPOINT = '/api/page-config/'+SITE;
   var SITE = 'gimkounn';
   var BRAND = 'GIMKOUNN';
 
