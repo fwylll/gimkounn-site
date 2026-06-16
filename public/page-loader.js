@@ -3,7 +3,7 @@
  * Include in <head>, call: loadPage('home')
  */
 (function(){
-  var API_BASE = '/api/page-config/gimkounn';
+  var CONFIG_ENDPOINT = '/page-config.json';
   var SITE = 'gimkounn';
   var BRAND = 'GIMKOUNN';
 
@@ -342,7 +342,7 @@
 
   window.loadPage = function(pageKey){
     // Fetch page-config
-    fetch(API_BASE).then(function(r){return r.json()}).then(function(config){
+    fetch(CONFIG_ENDPOINT).then(function(r){return r.json()}).then(function(config){
       var pages=config.pages||{};
       var pageData=pages[pageKey];
       if(!pageData) return;
