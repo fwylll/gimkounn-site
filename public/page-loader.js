@@ -377,7 +377,30 @@
       loadNavFooter(config);
 
       // 4. Load products list if on products page
-      if(pageKey==='products') loadProducts();
+      if(pageKey==='products'){
+        var pxhr = new XMLHttpRequest();
+        pxhr.open('GET','/api/products/'+SITE,true);
+        pxhr.onload = function(){
+          try{ var d=JSON.parse(pxhr.responseText); }catch(e){ return; }
+          var products=d.products||d||[];
+          if(!Array.isArray(products)) products=[products];
+          var grid=document.getElementById('product-grid');
+          if(!grid) grid=document.getElementById('productGrid');
+          if(!grid) return;
+          var cards='';
+          for(var i=0;i<products.length;i++){
+            var p=products[i];
+            if(!p||p._meta) continue;
+            var stars='';var rs=Math.round(p.rating||4.5);
+            for(var si=0;si<5;si++) stars+=si<rs?'★':'☆';
+            var img=p.mainImage||(p.images&&p.images[0])||'';
+            var href='/products/'+(p.slug||p.id||'led-roller-shoes');
+            cards+='<a href="'+href+'/" class="product-card"><div class="product-img">'+(img?'<img src="'+escAttr(img)+'" alt="'+esc(p.title||'')+'" loading="lazy" onerror="this.parentElement.textContent=\'X\'">':'<span>🛼</span>')+'</div><div class="product-body"><h3>'+esc(p.title||'Product')+'</h3><div class="product-price">'+(p.originalPrice&&p.originalPrice>p.price?'<span style="text-decoration:line-through;color:#999;margin-right:6px">$'+p.originalPrice+'</span>':'')+'<span>$'+(p.price||'39.99')+'</span></div><div class="product-rating">'+stars+' '+(p.rating||'4.7')+'</div></div></a>';
+          }
+          grid.innerHTML=cards;
+        };
+        pxhr.send();
+      }
 
       // 5. Re-init animations
       initAnimations();
