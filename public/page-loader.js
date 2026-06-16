@@ -397,7 +397,7 @@
       loadNavFooter(config);
 
       // 4. Load products list if on products page
-      if(pageKey==='products') setTimeout(loadProducts,50);
+      if(pageKey==='products') loadProducts();
 
       // 5. Re-init animations
       initAnimations();
