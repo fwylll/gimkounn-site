@@ -33,7 +33,7 @@
     var h='<div class="hero-carousel"><div class="hc-slides"><div class="hc-slide-track">';
     for(var i=0;i<slides.length;i++){
       var sl=slides[i];
-      h+='<div class="hc-slide"><div class="hc-slide-img" style="background:url('+escAttr(sl.image||'/gimkounn-images/Roller_Shoes_pink_1780899836222.png')+') 50% 50% / cover no-repeat';
+      h+='<div class="hc-slide"><div class="hc-slide-img" style="background:url('+escAttr(sl.image||'/gimkounn-images/Roller_Shoes_purple_1781251366986.png')+') 50% 50% / cover no-repeat';
       if(sl.bgColor) h+=','+sl.bgColor;
       h+='"><div style="position:absolute;inset:0;background:rgba(0,0,0,.20)"></div>';
       if(sl.ctaText) h+='<a href="'+escAttr(sl.ctaUrl||'/products/')+'" class="hc-cta">'+esc(sl.ctaText)+'</a>';
@@ -235,7 +235,7 @@
     var h='<section class="hb"><div class="hb-track">';
     for(var i=0;i<slides.length;i++){
       var sl=slides[i];
-      h+='<div class="hb-slide"><div class="hb-img" style="background-image:url('+escAttr(sl.image||'/gimkounn-images/Roller_Shoes_pink_1780899836222.png')+')"></div>';
+      h+='<div class="hb-slide"><div class="hb-img" style="background-image:url('+escAttr(sl.image||'/gimkounn-images/Roller_Shoes_purple_1781251366986.png')+')"></div>';
       h+='<div class="hb-content"><h2>'+esc(sl.heading||'')+'</h2><p>'+esc(sl.subtitle||'')+'</p>';
       if(sl.ctaText) h+='<a href="'+escAttr(sl.ctaUrl||'/products/')+'" class="hb-cta">'+esc(sl.ctaText)+'</a>';
       h+='</div></div>';
