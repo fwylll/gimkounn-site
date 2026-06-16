@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hansybay.com/sitemap.xml
