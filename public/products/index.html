@@ -347,5 +347,38 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 <span>© 2026 HANSYBAY. All rights reserved.</span>
 <span>United States · contact@hansybay.com</span>
 </div></footer>
-<script>loadPage('products')</script></body>
+<script>
+loadPage('products');
+
+// Standalone product grid loader (guaranteed to run after DOM)
+(function(){
+  function loadProductGrid(){
+    var grid = document.getElementById('product-grid');
+    if(!grid) return;
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','/api/products/gimkounn',true);
+    xhr.onload = function(){
+      try{ var d = JSON.parse(xhr.responseText); }catch(e){ return; }
+      var products = d.products || [];
+      if(!Array.isArray(products)) products = [products];
+      var cards = '';
+      for(var i=0;i<products.length;i++){
+        var p = products[i];
+        if(!p||p._meta) continue;
+        var stars='';var rs=Math.round(p.rating||4.5);
+        for(var si=0;si<5;si++) stars+=si<rs?'☆':'☆';
+        stars = '';
+        for(var si=0;si<5;si++) stars+=si<rs?'★':'☆';
+        var img=p.mainImage||(p.images&&p.images[0])||'';
+        var href='/products/'+(p.slug||p.id||'led-roller-shoes');
+        cards+='<a href="'+href+'/" class="product-card"><div class="product-img">'+(img?'<img src="'+img+'" alt="'+(p.title||'')+'" loading="lazy">':'<div>🛼</div>')+'</div><div class="product-body"><h3>'+(p.title||'Product')+'</h3><div class="product-price">'+((p.originalPrice&&p.originalPrice>p.price)?'<span style="text-decoration:line-through;color:#999;margin-right:6px">$'+p.originalPrice+'</span> ':'')+'<span>$'+(p.price||'39.99')+'</span></div><div class="product-rating">'+stars+' '+(p.rating||'4.7')+'</div></div></a>';
+      }
+      grid.innerHTML = cards;
+    };
+    xhr.send();
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',loadProductGrid);
+  else loadProductGrid();
+})();
+</script></body>
 </html>
