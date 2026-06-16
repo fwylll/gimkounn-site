@@ -342,7 +342,7 @@
 
   window.loadPage = function(pageKey){
     // Fetch page-config
-    fetch(CONFIG_ENDPOINT).then(function(r){return r.json()}).then(function(config){
+    fetch(CONFIG_ENDPOINT+'?_t='+Date.now()).then(function(r){return r.json()}).then(function(config){
       var pages=config.pages||{};
       var pageData=pages[pageKey];
       if(!pageData) return;
