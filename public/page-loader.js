@@ -268,26 +268,6 @@
 
   // === MAIN LOADER ===
 
-  function loadProducts(){
-    // Load products list into #product-grid
-    fetch('/api/products/'+SITE).then(function(r){return r.json()}).then(function(d){
-      var products=d.products||d||[];
-      if(!Array.isArray(products)) products=[products];
-      var grid=document.getElementById('product-grid');
-      if(!grid) return;
-      grid.innerHTML='';
-      for(var i=0;i<products.length;i++){
-        var p=products[i];
-        if(!p||p._meta) continue;
-        var stars='', rs=Math.round(p.rating||4.5);
-        for(var si=0;si<5;si++) stars+=si<rs?'★':'☆';
-        var img=p.mainImage||(p.images&&p.images[0])||'';
-        var href='/products/'+(p.asin||'led-roller-shoes');
-        grid.innerHTML+='<a href="'+href+'/" class="product-card"><div class="product-img">'+(img?'<img src="'+escAttr(img)+'" alt="'+esc(p.title||'')+'" loading="lazy" onerror="this.parentElement.textContent=\'🛼\'">':'<span>🛼</span>')+'</div><div class="product-body"><h3>'+esc(p.title||'Product')+'</h3><div class="product-price">$'+(p.price||'39.99')+'</div><div class="product-rating">'+stars+' '+(p.rating||'4.7')+'</div></div></a>';
-      }
-    }).catch(function(){});
-  }
-
   function loadNavFooter(config){
     // Update nav and footer from config
     var nav=config.nav||{};
