@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>GIMKOUNN • LED Light-Up Roller Skates • Dazzling Sneakers With Wheels — GIMKOUNN</title>
-<meta name="description" content="GIMKOUNN • LED Light-Up Roller Skates • Dazzling Sneakers With Wheels — CE EN13843 certified kids roller shoes with LED lights, adjustable sizing, removable wheels. Shop GIMKOUNN.">
+<title id="seo-title">GIMKOUNN • LED Light-Up Roller Skates • Dazzling Sneakers With Wheels — GIMKOUNN</title>
+<meta name="description" id="seo-desc" content="GIMKOUNN • LED Light-Up Roller Skates • Dazzling Sneakers With Wheels — CE EN13843 certified kids roller shoes with LED lights, adjustable sizing, removable wheels. Shop GIMKOUNN.">
 <link rel="canonical" href="https://gimkounn.com/products/led-roller-shoes/">
 <link rel="alternate" hreflang="en" href="https://gimkounn.com/products/led-roller-shoes/">
 <link rel="alternate" hreflang="x-default" href="https://gimkounn.com/products/led-roller-shoes/">
@@ -308,7 +308,22 @@ function go(i){if(i<0)i=_slides.length-1;if(i>=_slides.length)i=0;var tr=documen
 function moveCarousel(dir){clearInterval(_timer);go(_ci+dir);_timer=setInterval(function(){go(_ci+1)},5000)}
 function initAnimations(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:0.15});document.querySelectorAll('.fade-up,.fade-in,.scale-in').forEach(function(el){obs.observe(el)})}
 document.addEventListener('DOMContentLoaded',function(){initAnimations();setTimeout(initCarousel,50)});
-</script>
+(function(){
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+var cMap={'white':'#fff','black':'#222','blue':'#4a6cf7','pink':'#e91e8c','purple':'#9c27b0','red':'#f44336','green':'#4caf50'};
+var x=new XMLHttpRequest();x.open('GET','/api/products/gimkounn?_t='+Date.now());x.onload=function(){try{var d=JSON.parse(x.responseText).products||[];var p=d.find(function(x){return x.slug=='led-roller-shoes'||x.id=='led-roller-shoes'});if(!p)return;
+var t=p.title||'';if(t){document.title=t+' -- GIMKOUNN';var dt=document.getElementById('seo-title');dt&&(dt.textContent=t);var dd=document.getElementById('seo-desc');dd&&(dd.setAttribute('content',p.seoDescription||t));}
+var pr=document.getElementById('pd-price');if(pr){var op=p.originalPrice||0,h='$'+p.price;if(op>p.price)h+=' <s style="color:#999;font-size:.9rem">$'+op+'</s>';pr.innerHTML=h;}
+var rt=document.getElementById('pd-rating');if(rt){var r=Math.round(p.rating||0),st='\u2605\u2605\u2605\u2605\u2605';rt.innerHTML=st.substring(0,r)+(r<5?'\u2606\u2606\u2606\u2606\u2606'.substring(0,5-r):'')+' '+p.rating;}
+var mi=document.getElementById('pd-main');if(mi&&p.mainImage)mi.src=p.mainImage;
+var gl=document.getElementById('pd-gallery');if(gl&&p.images){gl.innerHTML='';p.images.forEach(function(im){var t=document.createElement('img');t.src=im;t.style='width:64px;height:64px;object-fit:cover;border-radius:6px;cursor:pointer;border:1px solid var(--gray-light)';t.onclick=function(){mi.src=im;};t.onerror=function(){this.style.display='none';};gl.appendChild(t);});}
+var cl=document.getElementById('pd-colors');if(cl&&p.colors){cl.innerHTML='';p.colors.forEach(function(c){var h=cMap[c.toLowerCase()]||'#ccc';var s=document.createElement('span');s.style='display:inline-block;width:28px;height:28px;border-radius:50%;background:'+h+';border:1px solid var(--gray-light)';s.title=c;cl.appendChild(s);});}
+var sz=document.getElementById('pd-sizes');if(sz&&p.sizes){sz.innerHTML='';p.sizes.forEach(function(s){var sp=document.createElement('span');sp.style='padding:4px 14px;border:1px solid var(--gray-light);border-radius:var(--radius-sm);font-size:.78rem;background:var(--white)';sp.textContent=s;sz.appendChild(sp);});}
+var az=document.getElementById('pd-amazon');if(az&&p.amazonUrl)az.href=p.amazonUrl;
+var dd=document.getElementById('pd-desc');if(dd&&p.detail)dd.innerHTML=p.detail;
+var ff=document.getElementById('pd-features');if(ff&&p.features){ff.innerHTML='';p.features.forEach(function(f){var li=document.createElement('li');li.style='padding:4px 0;font-size:.85rem;color:var(--text2);display:flex;align-items:center;gap:6px';li.innerHTML='<span style="color:var(--cta)">\u2713</span>'+esc(f);ff.appendChild(li);});}
+}catch(e){}};x.send();
+})();</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -376,6 +391,7 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 </div>
 </section>
 </main>
+
 <footer class="site-footer"><div class="site-footer-inner">
 <div class="ft-brand"><div class="ft-logo">GIMKOUNN</div><p>Designer roller shoes with removable wheels and 7-color LED lights. CE EN13843 certified. Built for kids aged 3-16 who deserve to fly.</p></div>
 <div class="ft-col"><h3>Shop</h3>
@@ -398,5 +414,6 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 <span>© 2026 GIMKOUNN. All rights reserved.</span>
 <span>United States · contact@gimkounn.com</span>
 </div></footer>
-</body>
-</html>
+<script src="/page-loader.js"></script>
+<script>loadPage('products')</script>
+</body></html>
