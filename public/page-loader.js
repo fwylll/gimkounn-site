@@ -321,7 +321,7 @@
 
   window.loadPage = function(pageKey){
     // Fetch page-config
-    fetch('/api/page-config/'+SITE+'?_t='+Date.now()).then(function(r){return r.json()}).then(function(config){
+    fetch('/api/page-config/'+SITE+'/?_t='+Date.now()).then(function(r){return r.json()}).then(function(config){
       var pages=config.pages||{};
       var pageData=pages[pageKey];
       if(!pageData) return;
@@ -430,7 +430,7 @@
   function fetchProductsGrid(){
     var grid=document.getElementById('product-grid');
     if(!grid) return;
-    fetch('/api/products/'+SITE+'?_t='+Date.now()).then(function(r){return r.json()}).then(function(data){
+    fetch('/api/products/'+SITE+'/?_t='+Date.now()).then(function(r){return r.json()}).then(function(data){
       var prods=data.products||[];
       if(!prods.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">No products found</div>';return;}
       var h='';
