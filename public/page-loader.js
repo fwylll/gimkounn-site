@@ -131,10 +131,11 @@
     var h='<div class="blog-section"><div class="blog-header"><h2>'+esc(s.title||'')+'</h2><p>'+esc(s.subtitle||'')+'</p></div><div class="blog-grid">';
     for(var i=0;i<posts.length;i++){
       var p=posts[i];
-      h+='<div class="blog-card"><div class="blog-img"';
-      if(p.image) h+=' style="background:url('+escAttr(p.image)+') 50% 50% / cover no-repeat"';
-      else h+='><div class="blog-placeholder">📝';
-      h+='</div><div class="blog-info"><h3>'+esc(p.title||'')+'</h3><p>'+esc((p.excerpt||'').substring(0,200))+'</p></div></div>';
+      var blogUrl = p.url && p.url !== '#' ? ' href="'+escAttr(p.url)+'"' : '';
+      h+='<a'+blogUrl+' class="blog-card fade-up"><div class="blog-img">';
+      if(p.image) h+='<img src="'+escAttr(p.image)+'" alt="'+escAttr(p.title||'')+'" loading="lazy" onerror="this.style.display=\'none\'">';
+      else h+='<span class="blog-placeholder">📝</span>';
+      h+='</div><div class="blog-info"><h3>'+esc(p.title||'')+'</h3><p>'+esc((p.excerpt||'').substring(0,200))+'</p></div></a>';
     }
     h+='</div></div>';
     return h;
@@ -442,10 +443,10 @@
         var r=Math.round(p.rating||0);
         for(var s=0;s<5;s++) stars+=s<r?'★':'☆';
         h+='<a class="product-card" href="/products/'+escAttr(slug)+'/">';
-        h+='<div class="pc-img"'+(img?' style="background-image:url('+escAttr(img)+')"':'')+'></div>';
-        h+='<div class="pc-info"><h3>'+esc(p.title||'')+'</h3>';
-        h+='<div class="pc-price">$'+esc(String(p.price||'0'))+'</div>';
-        h+='<div class="pc-rating">'+stars+' <span>'+esc(String(p.rating||''))+'</span></div></div></a>\n';
+        h+='<div class="product-img">'+(img?'<img src="'+escAttr(img)+'" alt="'+escAttr(p.title||'')+'" loading="lazy">':'🛼')+'</div>';
+        h+='<div class="product-body"><h3>'+esc(p.title||'')+'</h3>';
+        h+='<div class="product-price">$'+(p.price||0).toFixed(2)+'</div>';
+        h+='<div class="product-rating">'+stars+' <span>'+esc(String(p.rating||''))+'</span></div></div></a>\n';
       }
       grid.innerHTML=h;
     }).catch(function(){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">Failed to load products</div>';});
