@@ -366,7 +366,6 @@
           else if(t==='brandStory') html+=renderBrandStorySection(s);
           else if(t==='faqContent') html+=renderFaqContentSection(s);
           else if(t==='media') html+=renderMediaSection(s);
-          else if(t==='heroBanner') html+=renderHeroBannerSection(s);
           else if(t==='productFilter') html+=renderProductFilterSection(s);
         }
         main.innerHTML=html;
