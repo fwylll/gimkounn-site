@@ -306,7 +306,7 @@
     if(ftBottom&&config.seo){
       var spans=ftBottom.querySelectorAll('span');
       if(spans.length>1){
-        var email=config.seo.email||'contact@gimkounn.com';
+        var email=config.seo.email||'szyzf9063@163.com';
         spans[1].textContent=config.seo.siteUrl?(config.seo.siteUrl.replace('https://','').replace(/\/$/,'')+' · '+email):email;
       }
     }
