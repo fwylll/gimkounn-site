@@ -325,7 +325,7 @@ function go(i){if(i<0)i=_slides.length-1;if(i>=_slides.length)i=0;var tr=documen
 function moveCarousel(dir){clearInterval(_timer);go(_ci+dir);_timer=setInterval(function(){go(_ci+1)},5000)}
 function initAnimations(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:0.15});document.querySelectorAll('.fade-up,.fade-in,.scale-in').forEach(function(el){obs.observe(el)})}
 document.addEventListener('DOMContentLoaded',function(){initAnimations();setTimeout(initCarousel,50)});
-</script>
+<script>window.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(window.fetchProductsGrid)window.fetchProductsGrid();if(window.setupFilterSort)window.setupFilterSort()},50)})</script></script>
 </head>
 <body>
 <a href="#main-content" class="skip-link" style="position:absolute;top:-9999px;left:-9999px;z-index:99999;padding:12px 20px;background:var(--cta);color:#fff;font-weight:700;border-radius:0 0 var(--radius-sm) var(--radius-sm)">Skip to main content</a>
@@ -386,5 +386,4 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 <span>United States · szyzf9063@163.com</span>
 </div></footer>
 <script src="/page-loader.js"></script>
-<script>loadPage('products')</script>
 </body></html>

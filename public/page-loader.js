@@ -463,6 +463,7 @@
           // Filter logic would require product categories
         });
       });
-    }
-  }
+  // Expose for static pages that need product grid without full loadPage()
+  window.fetchProductsGrid = fetchProductsGrid;
+  window.setupFilterSort = setupFilterSort;
 })();
