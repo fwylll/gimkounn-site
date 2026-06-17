@@ -459,7 +459,11 @@
         btn.addEventListener('click',function(){
           btns.forEach(function(b){b.style.background='var(--white)';b.style.color='var(--text2)';b.style.border='1.5px solid var(--gray-light)'});
           this.style.background='var(--cta)';this.style.color='var(--white)';this.style.border='none';
-          // Filter logic would require product categories
+          // Update canonical + title for filtered view (SEO: tells Google canonical is /products/)
+          var filterLabel = this.textContent || this.getAttribute('data-filter') || '';
+          var canonical = document.querySelector('link[rel="canonical"]');
+          if (canonical) canonical.href = 'https://gimkounn.com/products/';
+          if (filterLabel) document.title = filterLabel + ' — GIMKOUNN';
         });
       });
     }
