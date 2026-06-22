@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <title>GIMKOUNN Videos — See Our Skates in Action</title>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"GIMKOUNN","url":"https://gimkounn.com","logo":"https://gimkounn.com/favicon.ico","description":"Watch GIMKOUNN roller shoes in action. See kids skating with confidence using our adjustable LED light-up sneakers.","sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"GIMKOUNN","url":"https://gimkounn.com","logo":"https://gimkounn.com/favicon.ico","description":"Watch GIMKOUNN roller shoes in action. Kids skating, product demos, unboxing, and customer reviews.","sameAs":[]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Videos","url":"https://gimkounn.com/videos/","isPartOf":{"@type":"WebSite","name":"GIMKOUNN","url":"https://gimkounn.com"}}</script>
-<meta name="description" content="Watch GIMKOUNN roller shoes in action. See kids skating with confidence using our adjustable LED light-up sneakers.">
+<meta name="description" content="Watch GIMKOUNN roller shoes in action. Kids skating, product demos, unboxing, and customer reviews.">
 <link rel="canonical" href="https://gimkounn.com/videos/">
 <link rel="alternate" hreflang="en-US" href="https://gimkounn.com/videos/">
 <link rel="alternate" hreflang="x-default" href="https://gimkounn.com/videos/">
 <meta property="og:title" content="GIMKOUNN Videos — See Our Skates in Action">
-<meta property="og:description" content="Watch GIMKOUNN roller shoes in action. See kids skating with confidence using our adjustable LED light-up sneakers.">
+<meta property="og:description" content="Watch GIMKOUNN roller shoes in action. Kids skating, product demos, unboxing, and customer reviews.">
 <meta property="og:url" content="https://gimkounn.com/videos/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GIMKOUNN">
@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GIMKOUNN Videos — See Our Skates in Action">
-<meta name="twitter:description" content="Watch GIMKOUNN roller shoes in action. See kids skating with confidence using our adjustable LED light-up sneakers.">
+<meta name="twitter:description" content="Watch GIMKOUNN roller shoes in action. Kids skating, product demos, unboxing, and customer reviews.">
 <meta name="twitter:image" content="https://gimkounn.com/gimkounn-images/Roller_Shoes_pink_1780899836222.png">
 <meta name="robots" content="index,follow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛼%3C/text%3E%3C/svg%3E">
@@ -322,11 +322,12 @@ a{color:inherit;text-decoration:none}
 .media-header{text-align:center;margin-bottom:48px}
 .media-header h2{font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;margin-bottom:10px}
 .media-header p{color:var(--text2)}
-.media-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
-.media-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:all .3s var(--ease);cursor:pointer;width:calc(33.333% - 16px)}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:24px;justify-items:center}
+.media-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:all .3s var(--ease);cursor:pointer;width:100%;max-width:420px;display:flex;flex-direction:column}
 .media-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
-.media-thumb{width:300px;aspect-ratio:16/9;flex-shrink:0;background:linear-gradient(135deg,#1a1a2e,#2d1b3d);display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
-.media-body{padding:20px}
+.media-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1a1a2e,#2d1b3d);display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff;position:relative;overflow:hidden}
+.media-thumb img{width:100%;height:100%;object-fit:cover}
+.media-body{padding:20px;flex:1}
 .media-body h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
 .media-body p{font-size:.82rem;color:var(--text2);line-height:1.5}
 .media-tag{display:inline-block;background:var(--cta-light);color:var(--cta);padding:3px 10px;border-radius:var(--radius-full);font-size:.7rem;font-weight:700;margin-bottom:8px}
@@ -357,12 +358,12 @@ a{color:inherit;text-decoration:none}
 @media(max-width:1024px){
   .age-grid > *{width:calc(50% - 12px)}
   .growth-grid{grid-template-columns:1fr}
-  .reviews-grid > *,.blog-grid > *,.media-grid > *,.cc-grid > *{width:calc(50% - 12px)}
+  .reviews-grid > *,.blog-grid > *,.cc-grid > *{width:calc(50% - 12px)}
   .site-footer-inner{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   .nav-links{display:none}
-  .age-grid > *,.reviews-grid > *,.blog-grid > *,.media-grid > *,.cc-grid > *{width:100%}
+  .age-grid > *,.reviews-grid > *,.blog-grid > *,.cc-grid > *{width:100%}
   .growth-grid{grid-template-columns:1fr}
   .site-footer-inner{grid-template-columns:1fr}
   .hc-slide-img{min-height:300px}
@@ -398,9 +399,12 @@ document.addEventListener('DOMContentLoaded',function(){initAnimations();setTime
 <a href="/products/" class="nav-cta">Shop Now</a>
 </div></nav>
 <main id="main-content" style="max-width:100%">
-<section class="page-hero" style="background:url(/gimkounn-images/Roller_Shoes_1_1781251385311.png) 50% 50% / cover no-repeat, linear-gradient(135deg,#1A1A2E,#1A1A3d);color:#fff;padding:80px 24px;text-align:center"><div style="position:relative;z-index:2"></div></section>
+<section class="page-hero" style="background:url(/gimkounn-images/Roller_Shoes_1_1781251385311.png) 50% 50% / cover no-repeat, linear-gradient(135deg,#1A1A2E,#1A1A3d);color:#fff;padding:80px 24px;text-align:center"><div style="position:relative;z-index:2"><h1 style="color:#fff">Watch GIMKOUNN in Action</h1></div></section>
 
-<section class="sec-wrap" style="max-width:var(--w);margin:0 auto;padding:var(--sec-py) var(--sec-px)"><div style="text-align:center;margin-bottom:36px"><h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.5px;margin-bottom:8px">Videos &amp; Media</h2><p style="color:var(--text2)"></p></div><div class="media-grid">
+<section class="sec-wrap" style="max-width:var(--w);margin:0 auto;padding:var(--sec-py) var(--sec-px)"><div style="text-align:center;margin-bottom:36px"><h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.5px;margin-bottom:8px">Videos &amp; Media</h2><p style="color:var(--text2)">Watch GIMKOUNN roller shoes in action</p></div><div class="media-grid">
+<div class="media-card fade-up"><div class="media-thumb"><iframe src="https://www.youtube.com/embed/cZaPuWBI2og?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy" title="Kids Roller Shoes in Action"></iframe></div><div class="media-body"><span class="media-tag">Video</span><h3>Kids Roller Shoes in Action</h3><p>See how kids enjoy GIMKOUNN LED light-up roller shoes with removable wheels</p></div></div>
+<div class="media-card fade-up"><div class="media-thumb"><iframe src="https://www.youtube.com/embed/AJojDfNlXuI?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy" title="How to Use Roller Shoes"></iframe></div><div class="media-body"><span class="media-tag">Video</span><h3>How to Use Roller Shoes</h3><p>Step-by-step guide: charging the LED lights, removing wheels, and adjusting shoe size</p></div></div>
+<div class="media-card fade-up"><div class="media-thumb"><img src="/gimkounn-images/2-roller-shoes.jpg" alt="Unboxing &amp; First Look" loading="lazy"></div><div class="media-body"><span class="media-tag">Video</span><h3>Unboxing &amp; First Look</h3><p>What comes in the box: roller shoes, USB charging cable, wheel removal tool</p></div></div>
 </div></section>
 
 </main>
