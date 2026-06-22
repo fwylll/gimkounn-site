@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Another",
+    "email": "a@b.com",
+    "message": "Second message",
+    "time": "2026-06-22T13:05:00+08:00",
+    "ip": "127.0.0.1"
+  }
+]
