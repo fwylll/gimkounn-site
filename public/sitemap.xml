@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gimkounn.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://gimkounn.com/products/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gimkounn.com/products/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://gimkounn.com/brand-story/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gimkounn.com/videos/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gimkounn.com/activities/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gimkounn.com/about/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://gimkounn.com/contact/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://gimkounn.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gimkounn.com/products/led-roller-shoes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gimkounn.com/privacy/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://gimkounn.com/faq/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gimkounn.com/products/led-roller-shoes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
