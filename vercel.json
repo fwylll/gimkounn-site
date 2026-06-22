@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.gimkounn.com" }],
+      "destination": "https://gimkounn.com/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
