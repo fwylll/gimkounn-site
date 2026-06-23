@@ -50,11 +50,11 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font);font-size:16px;line-height:1.6;color:var(--text);background:linear-gradient(180deg,#FBFBFE 0%,#F5F3FA 30%,#FFF 100%);margin:0;padding:0;padding-top:var(--header-h, 64px)}.has-promo{padding-top:104px}
+body{font-family:var(--font);font-size:16px;line-height:1.6;color:var(--text);background:linear-gradient(180deg,#FBFBFE 0%,#F5F3FA 30%,#FFF 100%);margin:0;padding:0}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
-.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.site-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06)}
 
 .nav{display:flex;align-items:center;height:64px}
 
@@ -81,7 +81,7 @@ a{color:inherit;text-decoration:none}
 .btn-pri{display:inline-flex;align-items:center;gap:6px;background:var(--cta);color:#fff;padding:14px 30px;border-radius:var(--radius-full);font-size:.92rem;font-weight:700;transition:all .3s var(--ease);box-shadow:0 4px 14px rgba(var(--cta-rgb),.35)}
 .btn-pri:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 6px 22px rgba(var(--cta-rgb),.45)}
 
-#promoBar{position:fixed;top:64px;left:0;right:0;z-index:99;height:40px;display:flex;align-items:center;overflow:hidden;background:var(--cta);color:#fff;font-size:.75rem;font-weight:500;letter-spacing:.5px}
+#promoBar{height:40px;display:flex;align-items:center;overflow:hidden;background:var(--cta);color:#fff;font-size:.75rem;font-weight:500;letter-spacing:.5px}
 #promoBar .promo-track{display:flex;animation:promoScroll 40s linear infinite;will-change:transform}
 #promoBar .promo-track:hover{animation-play-state:paused}
 .promo-item{display:flex;align-items:center;flex-shrink:0;white-space:nowrap;padding:0 48px}
@@ -95,7 +95,7 @@ a{color:inherit;text-decoration:none}
 .hc-slides{position:relative;width:100%;overflow:hidden}
 .hc-slide-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform;width:100%}
 .hc-slide{flex:0 0 100%;min-width:0;width:100%}
-.hc-slide-img{width:100%;min-height:calc(100svh - var(--header-h));background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
+.hc-slide-img{width:100%;min-height:100svh;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
 .hc-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;text-align:center;color:#fff;width:90%;max-width:700px}
 .hc-text h2{font-size:clamp(1.3rem,4vw,2.2rem);font-weight:800;margin-bottom:10px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
 .hc-text p{font-size:.9rem;opacity:.9;text-shadow:0 1px 6px rgba(0,0,0,.3);line-height:1.6}
@@ -325,7 +325,7 @@ a{color:inherit;text-decoration:none}
   .age-grid > *,.reviews-grid > *,.cc-grid > *{width:100%}
   .growth-grid{grid-template-columns:1fr}
   .site-footer-inner{grid-template-columns:1fr}
-  .hc-slide-img{min-height:calc(100svh - var(--header-h))}
+  .hc-slide-img{min-height:100svh}
   .hc-text h2{font-size:clamp(1.1rem,3.5vw,1.8rem)}
   .hc-text p{font-size:.82rem}
 }</style>
@@ -335,8 +335,8 @@ function initCarousel(){_slides=Array.from(document.querySelectorAll('.hc-slide'
 function go(i){if(i<0)i=_slides.length-1;if(i>=_slides.length)i=0;var tr=document.querySelector('.hc-slide-track');if(tr)tr.style.transform='translateX(-'+(i*100)+'%)';document.querySelectorAll('.hc-dot').forEach(function(d,idx){d.classList.toggle('active',idx===i)});_ci=i}
 function moveCarousel(dir){clearInterval(_timer);go(_ci+dir);_timer=setInterval(function(){go(_ci+1)},5000)}
 function initAnimations(){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:0.15});document.querySelectorAll('.fade-up,.fade-in,.scale-in').forEach(function(el){obs.observe(el)})}
-function initHeaderOffset(){var p=document.getElementById('promoBar');if(p){document.body.classList.add('has-promo');var h=104}else{var h=64};document.documentElement.style.setProperty('--header-h',h+'px')}
-document.addEventListener('DOMContentLoaded',function(){initHeaderOffset();initAnimations();setTimeout(initCarousel,50)});
+
+document.addEventListener('DOMContentLoaded',function(){initAnimations();setTimeout(initCarousel,50)});
 </script>
 </head>
 <body>
