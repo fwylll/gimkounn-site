@@ -1,0 +1,574 @@
+{
+  "pages": {
+    "home": {
+      "sections": [
+        {
+          "bgColor": "#7C3AED",
+          "messages": [
+            {
+              "label": "Shop Now",
+              "text": "New message",
+              "url": "/products/"
+            },
+            {
+              "label": "Shop Now",
+              "text": "New message",
+              "url": "/products/"
+            },
+            {
+              "label": "Shop Now",
+              "text": "New message",
+              "url": "/products/"
+            }
+          ],
+          "text": "✨ Free US Shipping on Orders Over 0 — Shop Now!",
+          "textColor": "#FFFFFF",
+          "type": "promoBar"
+        },
+        {
+          "slides": [
+            {
+              "bgColor": "#1A1A2E",
+              "ctaPrimaryUrl": "/products/",
+              "ctaText": "SHOP NOW",
+              "image": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+              "subtitle": "Kids LED Roller Shoes",
+              "textColor": "#FFFFFF",
+              "title": "Roll With Style"
+            },
+            {
+              "bgColor": "#1A1A2E",
+              "ctaText": "SHOP NOW",
+              "image": "/gimkounn-images/Roller_Shoes_purple_1781251366986.webp",
+              "subtitle": "",
+              "textColor": "#fff",
+              "title": "New Slide"
+            }
+          ],
+          "type": "hero"
+        },
+        {
+          "items": [
+            {
+              "icon": "🛡️",
+              "text": "CE EN13843 Certified"
+            },
+            {
+              "icon": "🚚",
+              "text": "Free U.S. Shipping"
+            },
+            {
+              "icon": "🔄",
+              "text": "30-Day Easy Returns"
+            }
+          ],
+          "type": "trustBar"
+        },
+        {
+          "maxItems": 4,
+          "productIds": [
+            "B0CQPH6H1F"
+          ],
+          "subtitle": "Most-loved styles, picked by parents",
+          "title": "Best Sellers",
+          "type": "hotProducts"
+        },
+        {
+          "subtitle": "Watch kids skate with confidence",
+          "title": "See Them in Action",
+          "type": "video",
+          "url": "https://www.youtube.com/shorts/AJojDfNlXuI"
+        },
+        {
+          "groups": [
+            {
+              "age": "3-5 yrs",
+              "colorTag": "#FFD700",
+              "size": "EU 22-25"
+            },
+            {
+              "age": "6-8 yrs",
+              "colorTag": "#7C3AED",
+              "size": "EU 26-30"
+            },
+            {
+              "age": "9-12 yrs",
+              "colorTag": "#FF6B35",
+              "size": "EU 31-35"
+            },
+            {
+              "age": "13-16 yrs",
+              "colorTag": "#4A90E2",
+              "size": "EU 36-40"
+            }
+          ],
+          "title": "Find The Perfect Fit",
+          "type": "ageGroups"
+        },
+        {
+          "image": "/gimkounn-images/Roller_Shoes_purple_1781251366986.png",
+          "steps": [
+            {
+              "desc": "Perfect for first-time skaters",
+              "icon": "👟",
+              "title": "Size 1: 22-25 EUR"
+            },
+            {
+              "desc": "One-click adjustment for growing feet",
+              "icon": "📏",
+              "title": "Size 2: 26-30 EUR"
+            },
+            {
+              "desc": "Full-size mode for confident skaters",
+              "icon": "🛼",
+              "title": "Size 3: 31-35 EUR"
+            }
+          ],
+          "subtitle": "Our patented 3-in-1 sizing system adjusts up to 3 sizes.",
+          "title": "Grows With Your Child",
+          "type": "growthSystem"
+        },
+        {
+          "reviews": [
+            {
+              "name": "Sarah M.",
+              "rating": 5,
+              "text": "My 6-year-old learned to skate in 3 days. Best purchase!",
+              "verified": true
+            }
+          ],
+          "title": "What Parents Say",
+          "type": "reviews"
+        }
+      ]
+    },
+    "products": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "",
+          "title": "Shop GIMKOUNN Roller Shoes",
+          "type": "pageHero"
+        },
+        {
+          "layout": "grid",
+          "productIds": [
+            "B0CQPH6H1F"
+          ],
+          "title": "Shop All Products",
+          "type": "productFilter"
+        },
+        {
+          "tags": [],
+          "type": "tagFilter"
+        }
+      ]
+    },
+    "brand-story": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "",
+          "title": "The GIMKOUNN Story",
+          "type": "pageHero"
+        },
+        {
+          "content": "GIMKOUNN was founded with a simple belief: every child deserves the freedom to move, play, and express themselves. Our designer roller shoes combine cutting-edge safety technology with bold, playful designs that kids love and parents trust. From removable wheels to 7-color LED lights, every detail is engineered for joy.",
+          "image": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "title": "Built for Kids Who Deserve to Fly",
+          "type": "brandStory",
+          "subtitle": "OUR MISSION"
+        }
+      ]
+    },
+    "videos": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "",
+          "title": "Watch GIMKOUNN in Action",
+          "type": "pageHero"
+        },
+        {
+          "items": [
+            {
+              "description": "See how kids enjoy GIMKOUNN LED light-up roller shoes with removable wheels",
+              "image": "/gimkounn-images/Roller_Shoes_purple_1781251366986.png",
+              "title": "Kids Roller Shoes in Action",
+              "type": "Video",
+              "videoUrl": "https://www.youtube.com/shorts/cZaPuWBI2og"
+            },
+            {
+              "description": "Step-by-step guide: charging the LED lights, removing wheels, and adjusting shoe size",
+              "image": "/gimkounn-images/1-roller-shoes.png",
+              "title": "How to Use Roller Shoes",
+              "type": "Video",
+              "videoUrl": "https://www.youtube.com/shorts/AJojDfNlXuI"
+            },
+            {
+              "description": "What comes in the box: roller shoes, USB charging cable, wheel removal tool",
+              "image": "/gimkounn-images/2-roller-shoes.jpg",
+              "title": "Unboxing & First Look",
+              "type": "Video",
+              "videoUrl": "https://www.youtube.com/shorts/AJojDfNlXuI"
+            }
+          ],
+          "subtitle": "Watch GIMKOUNN roller shoes in action",
+          "title": "Videos & Media",
+          "type": "media"
+        }
+      ]
+    },
+    "activities": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "",
+          "title": "Join Our Community",
+          "type": "pageHero"
+        },
+        {
+          "cards": [
+            {
+              "description": "",
+              "icon": "🎉",
+              "title": "Latest Events"
+            },
+            {
+              "description": "",
+              "icon": "📄",
+              "tag": "",
+              "title": "Card"
+            },
+            {
+              "description": "",
+              "icon": "📄",
+              "tag": "",
+              "title": "Card"
+            },
+            {
+              "description": "",
+              "icon": "📄",
+              "tag": "",
+              "title": "Card"
+            },
+            {
+              "description": "",
+              "icon": "📄",
+              "tag": "",
+              "title": "Card"
+            },
+            {
+              "description": "",
+              "icon": "📄",
+              "tag": "",
+              "title": "Card"
+            }
+          ],
+          "subtitle": "",
+          "title": "Community",
+          "type": "contentCards"
+        }
+      ]
+    },
+    "about": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "",
+          "title": "About GIMKOUNN",
+          "type": "pageHero"
+        },
+        {
+          "features": [
+            {
+              "desc": "CE EN13843 certified",
+              "icon": "✅",
+              "title": "Safety First"
+            },
+            {
+              "desc": "Description",
+              "icon": "🎯",
+              "title": "Feature"
+            },
+            {
+              "desc": "Description",
+              "icon": "🎯",
+              "title": "Feature"
+            },
+            {
+              "desc": "Description",
+              "icon": "🎯",
+              "title": "Feature"
+            }
+          ],
+          "mission": "We believe every child deserves the joy of skating.",
+          "title": "Our Story",
+          "type": "aboutContent"
+        }
+      ]
+    },
+    "contact": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "We would love to hear from you",
+          "title": "Contact",
+          "type": "pageHero"
+        },
+        {
+          "email": "szyzf9063@163.com",
+          "intro": "We'd love to hear from you! Whether you have a question about sizing, shipping, or anything else, our team is ready to help.",
+          "location": "CHINA",
+          "outro": "We respond to all inquiries within 24 hours. For order questions, include your order number.",
+          "phone": "+1 (800) 123-4567",
+          "responseTime": "Within 24 hours on business days",
+          "title": "Get in Touch",
+          "type": "contactInfo"
+        }
+      ]
+    },
+    "faq": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "Everything you need to know about GIMKOUNN roller shoes",
+          "title": "Frequently Asked Questions",
+          "type": "pageHero"
+        },
+        {
+          "faqs": [
+            {
+              "a": "Measure your child's foot length in cm. GIMKOUNN roller shoes feature an adjustable 4-size system covering 3 EU sizes per pair. Check our size chart or contact us for personalized sizing advice.",
+              "q": "How do I choose the right size?"
+            },
+            {
+              "a": "22-25 EUR = 14-16 cm insole (3-6 yrs). 26-30 EUR = 16.5-19 cm (7-12 yrs). 31-35 EUR = 19.5-22 cm (13-16 yrs). Each GIMKOUNN pair adjusts across 3 sizes for growing feet.",
+              "q": "What is the EUR to insole length chart?"
+            },
+            {
+              "a": "USB rechargeable — 1 hour full charge gives 5-8 hours of continuous lighting. Each pair includes a magnetic USB cable; simply snap the connector onto the charging port on the wheel.",
+              "q": "How do I charge the LED wheels?"
+            },
+            {
+              "a": "Push the release button on each wheel base. No tools required — wheels pop out in seconds. Pop them back in to skate again. Great for school, mall trips, and play.",
+              "q": "How do I switch between skate and sneaker mode?"
+            },
+            {
+              "a": "Free standard shipping within the United States (7-12 business days). Express shipping available at checkout. International shipping to select countries — rates calculated at checkout.",
+              "q": "What are the shipping options and costs?"
+            },
+            {
+              "a": "30-day easy returns. Shoes must be unworn with all original accessories and packaging. Contact us at szyzf9063@163.com to initiate a return or exchange.",
+              "q": "What is the return policy?"
+            },
+            {
+              "a": "Yes — CE EN13843 certified with a low center of gravity design, easy-brake system, and adjustable ankle buckle. GIMKOUNN roller shoes are trusted by parents worldwide for first-time skaters.",
+              "q": "Are these shoes safe for beginners?"
+            },
+            {
+              "a": "7 colors and 16 flash modes — self-powered by magnetic induction while rolling. No batteries needed. Modes include steady glow, slow fade, strobe, and color cycling.",
+              "q": "How many LED colors and modes are there?"
+            }
+          ],
+          "title": "FAQ",
+          "type": "faqContent"
+        }
+      ]
+    },
+    "privacy": {
+      "sections": [
+        {
+          "bgColor": "#1A1A2E",
+          "bgImage": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "How we protect your data",
+          "title": "Privacy Policy",
+          "type": "pageHero"
+        },
+        {
+          "cards": [
+            {
+              "description": "When you contact GIMKOUNN via email or our contact form, we may collect your name, email address, and any information you voluntarily provide. We do not use cookies, analytics, or tracking technologies on this website.",
+              "icon": "📋",
+              "tag": "Information",
+              "title": "What We Collect"
+            },
+            {
+              "description": "We use your information solely to respond to your inquiries and provide customer service. We do not share, sell, or rent your personal information to third parties.",
+              "icon": "🔒",
+              "tag": "Usage",
+              "title": "How We Use It"
+            },
+            {
+              "description": "We implement appropriate security measures to protect your information. However, no method of electronic communication is 100% secure.",
+              "icon": "🛡️",
+              "tag": "Security",
+              "title": "Data Security"
+            },
+            {
+              "description": "Questions about this privacy policy? Contact us at szyzf9063@163.com.",
+              "icon": "✉️",
+              "tag": "Contact",
+              "title": "Contact Us"
+            }
+          ],
+          "subtitle": "Last updated: June 10, 2026",
+          "title": "Privacy Policy",
+          "type": "contentCards"
+        }
+      ]
+    }
+  },
+  "nav": {
+    "ctaText": "Shop Now",
+    "ctaUrl": "/products/",
+    "links": [
+      {
+        "label": "Products",
+        "url": "/products/"
+      },
+      {
+        "label": "Brand Story",
+        "url": "/brand-story/"
+      },
+      {
+        "label": "Videos",
+        "url": "/videos/"
+      },
+      {
+        "label": "Activities",
+        "url": "/activities/"
+      },
+      {
+        "label": "About",
+        "url": "/about/"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact/"
+      }
+    ]
+  },
+  "footer": {
+    "description": "",
+    "columns": [
+      {
+        "title": "SHOP",
+        "links": [
+          {
+            "label": "All Products",
+            "url": "/products/"
+          },
+          {
+            "label": "LED Roller Shoes",
+            "url": "/products/"
+          }
+        ]
+      },
+      {
+        "title": "LEARN",
+        "links": [
+          {
+            "label": "Our Story",
+            "url": "/brand-story/"
+          },
+          {
+            "label": "Videos",
+            "url": "/videos/"
+          },
+          {
+            "label": "Community",
+            "url": "/activities/"
+          }
+        ]
+      },
+      {
+        "title": "SUPPORT",
+        "links": [
+          {
+            "label": "About",
+            "url": "/about/"
+          },
+          {
+            "label": "Contact",
+            "url": "/contact/"
+          },
+          {
+            "label": "Privacy Policy",
+            "url": "/privacy/"
+          },
+          {
+            "label": "FAQ",
+            "url": "/faq/"
+          }
+        ]
+      }
+    ],
+    "copyright": "© 2026 GIMKOUNN"
+  },
+  "seo": {
+    "brandName": "GIMKOUNN",
+    "pages": {
+      "about": {
+        "description": "About GIMKOUNN — our commitment to safety, quality, and fun.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "About GIMKOUNN — Our Mission & Values"
+      },
+      "activities": {
+        "description": "Join the GIMKOUNN community. Discover events, activities, and stories from kids and families who love our LED light-up roller shoes.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "GIMKOUNN Community — Events & Activities"
+      },
+      "brand-story": {
+        "description": "Learn about GIMKOUNN — our mission to create safe, fun roller shoes for kids. Discover our commitment to quality, innovative design, and CE EN13843 safety certification for children ages 3 to 16.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "The GIMKOUNN Story — Why We Make Kids Skates"
+      },
+      "contact": {
+        "description": "Contact GIMKOUNN for questions about sizing, orders, and returns. Reach us by email and expect a response within 24 hours.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "Contact GIMKOUNN — Get Help with Your Roller Shoes"
+      },
+      "faq": {
+        "description": "Find answers about GIMKOUNN roller shoes: sizing, LED charging, wheel removal, safety certification, shipping, and warranty.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "GIMKOUNN FAQ — Frequently Asked Questions"
+      },
+      "home": {
+        "description": "Discover GIMKOUNN designer roller shoes with removable wheels, 7-color LED lights, and adjustable sizing. CE EN13843 certified for kids 3-16. Free US shipping.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "GIMKOUNN — Designer Roller Shoes for Kids | Dazzling Sneakers With Wheels"
+      },
+      "privacy": {
+        "description": "GIMKOUNN privacy policy — learn how we collect, use, and protect your information. No cookies, no tracking, no data sharing with third parties. Contact us with questions.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "GIMKOUNN Privacy Policy"
+      },
+      "products": {
+        "description": "Browse GIMKOUNN complete collection of kids roller shoes with LED light-up wheels. Adjustable sizing, removable wheels, USB rechargeable.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "Shop All GIMKOUNN Roller Shoes — LED Light-Up Kids Skates"
+      },
+      "videos": {
+        "description": "Watch GIMKOUNN roller shoes in action. See kids skating with confidence, product demos, unboxing videos, and customer reviews of LED light-up roller skates.",
+        "ogImage": "/gimkounn-images/9-roller-shoes.jpg",
+        "title": "GIMKOUNN Videos — See Our Skates in Action"
+      }
+    }
+  },
+  "config": {
+    "brandName": "GIMKOUNN",
+    "brandColor": "#7C3AED",
+    "brandColorHover": "#D81B5F",
+    "siteUrl": "https://gimkounn.com",
+    "contactEmail": "hsb3148@163.com",
+    "socialLinks": {}
+  }
+}
