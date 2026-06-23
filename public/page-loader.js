@@ -196,7 +196,7 @@
     if(s.subtitle) h+='<p style="color:var(--text2)">'+esc(s.subtitle)+'</p>';
     h+='</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--gray-bg);border-radius:var(--radius);overflow:hidden"><div style="min-height:350px;display:flex;align-items:center;justify-content:center;font-size:5rem;background:linear-gradient(135deg,#fce4ec,#e8f5ee)">';
     if(s.image) h+='<img src="'+escAttr(s.image)+'" style="width:100%;height:100%;object-fit:cover" alt="Story">'; else h+='📖';
-    h+='</div><div style="padding:40px"><p style="color:var(--text2);line-height:1.8;font-size:1rem">'+esc((s.story||'').substring(0,500))+'</p>';
+    h+='</div><div style="padding:40px"><p style="color:var(--text2);line-height:1.8;font-size:1rem">'+esc((s.content||s.story||'').substring(0,500))+'</p>';
     if(s.stats&&s.stats.length){
       h+='<div style="display:flex;gap:24px;margin-top:24px;flex-wrap:wrap">';
       for(var i=0;i<s.stats.length;i++){
@@ -340,6 +340,9 @@
       var main=document.querySelector('main');
       if(!main) return;
       var secs=pageData.sections||[];
+      // Preserve static pageHero (pre-rendered in HTML) to avoid flicker
+      var staticHero=main.querySelector('.page-hero');
+      var savedHero=staticHero?staticHero.outerHTML:'';
       if(secs.length){
         var html='';
         // Add brand tagline H1 for home page
@@ -351,6 +354,8 @@
           var s=secs[i];
           if(s.enabled===false) continue;
           var t=s.type;
+          // Skip pageHero if static version already in DOM (avoids flicker)
+          if(t==='pageHero'&&savedHero) continue;
           if(t==='promoBar') html+=renderPromoBarSection(s);
           else if(t==='hero') html+=renderHeroSection(s);
           else if(t==='trustBar') html+=renderTrustBarSection(s);
@@ -368,6 +373,8 @@
           else if(t==='media') html+=renderMediaSection(s);
           else if(t==='productFilter') html+=renderProductFilterSection(s);
         }
+        // Prepend saved static pageHero to avoid flicker while keeping dynamic sections fresh
+        if(savedHero) html=savedHero+html;
         main.innerHTML=html;
       }
 
