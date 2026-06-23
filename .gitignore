@@ -1,19 +1,7 @@
-# 后台数据 — 仅存本地服务器，不推 GitHub/Vercel
-public/page-config.json
-product-db/
-*.pyc
-__pycache__/
-.DS_Store
-.vercel
-public/page-editor.html
-public/media-manager.html
-public/product-editor.html
-public/images/
-public/media-list.json
-public/.deploy-trigger
-*.bak
+gimkounn-images/
+hansybay-images/
 *.png
-*.jpg
-*.jpeg
 *.webp
-*.gif
+*.jpg
+media-list.json
+contact-submissions.json
