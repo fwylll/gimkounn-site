@@ -106,7 +106,7 @@
           "type": "ageGroups"
         },
         {
-          "image": "/gimkounn-images/Roller_Shoes_purple_1781251366986.png",
+          "image": "/gimkounn-images/Roller_Shoes_purple_1781251366986.webp",
           "steps": [
             {
               "desc": "Perfect for first-time skaters",
@@ -177,9 +177,9 @@
         {
           "content": "GIMKOUNN was founded with a simple belief: every child deserves the freedom to move, play, and express themselves. Our designer roller shoes combine cutting-edge safety technology with bold, playful designs that kids love and parents trust. From removable wheels to 7-color LED lights, every detail is engineered for joy.",
           "image": "/gimkounn-images/Roller_Shoes_1_1781251385311.webp",
+          "subtitle": "OUR MISSION",
           "title": "Built for Kids Who Deserve to Fly",
-          "type": "brandStory",
-          "subtitle": "OUR MISSION"
+          "type": "brandStory"
         }
       ]
     },
